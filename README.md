@@ -1,0 +1,2 @@
+Create a progam that uses a function called computerPlay that will do a rock, paper, or scissors randomly.
+Create a function that plays a single round and takes player and computer selection and returns a string based on who won.

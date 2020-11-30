@@ -1,0 +1,43 @@
+<script>
+function computerPlay(){
+    choice = 0;
+    for(i = 0; i < 2; i++){
+        choice += Math.round(Math.random())       
+/*     console.log ("Round " + i)
+        console.log ("choice is " + choice) 
+ */
+    }
+    if (choice == 0) {
+        console.log ("Computer chose rock");
+        return "rock"
+    } else if (choice == 1) {
+        console.log ("computer chose paper");
+        return "paper"
+    } else if (choice == 2) {
+        console.log ("computer chose scissors");
+        return "scissors"
+    }
+}
+
+function playRound(playerSelection, computerSelection){
+    playerchoice = playerSelection.toLowerCase()
+    if(playerchoice == computerSelection) {
+        console.log("You tied! You both chose " + playerchoice)
+    } else if (playerchoice == "rock" && computerSelection == "scissors") {
+        console.log("You win! You chose " + playerchoice + " and the computer chose " + computerSelection)
+    } else if (playerchoice == "paper" && computerSelection == "rock") {
+        console.log("You win! You chose " + playerchoice + " and the computer chose " + computerSelection)
+    } else if (playerchoice == "scissors" && computerSelection == "paper") {
+        console.log("You win! You chose " + playerchoice + " and the computer chose " + computerSelection)
+    } else {
+        console.log("You lose! You chose " + playerchoice + " and the computer chose " + computerSelection)
+    }
+}
+
+for(i = 0; i < 5; i ++){
+    answer = prompt("Rock, paper, scissors?")
+    playRound(answer, computerPlay())
+}
+</script>
+<body></body>
+
